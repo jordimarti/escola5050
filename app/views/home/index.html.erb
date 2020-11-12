@@ -1,8 +1,6 @@
 <div class="row">
   <div class="col-md-8">
-    <div class="video-container">
-      <div class="theoplayer-container video-js theoplayer-skin vjs-16-9"></div>
-    </div>
+    
     <div class="container-interactiu">
 
       <%= render 'fases/primera' %>
@@ -44,22 +42,3 @@
 		</div>
   </div>
 </div>
-
-
-<script>
-var playbackId = "<%= @video %>";
-
-var element = document.querySelector(".theoplayer-container");
-var player = new THEOplayer.Player(element, {
-    libraryLocation: "https://cdn.myth.theoplayer.com/ea920c04-cb68-41de-961c-e54bd3218408"
-});
-
-player.source = {
-  sources: [{
-      "src": "https://stream.mux.com/"+playbackId+".m3u8",
-      "type": "application/x-mpegurl"
-  }]
-};
-
-player.preload = 'auto';
-</script>

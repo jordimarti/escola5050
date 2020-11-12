@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'puntuacions/esborrar_tot'
   get 'puntuacions/grava_puntuacio'
   get 'home/espera'
+  get 'video', to: 'home#video', as: :video
   get 'home/index'
   get 'fases/canvi_fase'
   resources :puntuacions
