@@ -1,0 +1,243 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/brands';
+@import 'bootstrap/scss/bootstrap';
+
+
+body {
+	background-color: #333;
+}
+
+.continguts-registre {
+	background-color: #00a99d;
+	min-height: 800px;
+	margin-bottom: 40px;
+}
+
+.logo-intro {
+	margin-top: 50px;
+}
+
+.text-intro {
+	padding: 20px;
+}
+
+span.text-gran {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.intro-card {
+	height: 150px;
+	margin-bottom: 20px;
+	background-color: #e5cd9d;
+	border-radius: 5px;
+}
+
+.intro-card-image {
+	float: left;
+	width: 150px;
+	height: 150px;
+}
+
+.intro-card-text {
+	margin-left: 155px;
+	padding: 15px;
+}
+
+.jordi-aparellador {
+	width: 150px;
+	border-radius: 5px;
+}
+
+.edifici-aparellador {
+	width: 150px;
+	border-radius: 5px;
+}
+
+.text-intro-explicacio {
+	font-size: 1.5em;
+}
+
+.btn-aventura {
+	background-color: #418174;
+	color: #fff;
+}
+
+.sala-espera-text {
+	font-weight: bold;
+}
+
+.sala-espera-entrar {
+	text-align: center;
+}
+
+.barra-header {
+	background-color: #00a99d;
+	margin-bottom: 20px;
+}
+
+.logo {
+	max-width: 250px;
+}
+
+.logo-portada {
+	max-width: 500px;
+}
+
+.menu-item {
+	color: #000 !important;
+}
+
+.continguts {
+	min-height: 600px;
+}
+
+.footer-container {
+	text-align: center;
+	color: #fff;
+	margin-bottom: 40px;
+}
+
+.inici-sessio-container {
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 15px;
+	margin: 40px 0px;
+}
+
+.container-logo-caateeb-inici {
+	text-align: center;
+}
+
+.logo-caateeb-inici {
+	max-width: 350px;
+}
+
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%; /* 16/9 ratio */
+	height: 0;
+	overflow: hidden;
+}
+
+#el-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.container-interactiu {
+	background-color: #fff;
+	min-height: 600px;
+	margin-bottom: 40px;
+}
+
+
+.contenidor-usuaris {
+	background-color: #eaeaea;
+	margin-bottom: 40px;
+}
+
+.contenidor-titol {
+	background-color: #00a99d;
+	color: #fff;
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 5px 10px;
+}
+
+.item-usuari {
+	padding: 5px 10px;
+	border-bottom: 1px solid #333;
+	background-color: #666;
+	color: #fff;
+}
+
+.indicador-usuari-online {
+	float: left;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: #00a99d;
+	margin-top: 7px;
+	margin-right: 8px;
+}
+
+.contenidor-xat {
+  height: 450px;
+  margin-bottom: 60px;
+}
+
+.contingut-xat {
+  height: 400px;
+  overflow: auto;
+  background: #444;
+  padding: 8px;
+}
+
+.form-xat {
+	margin-top: 5px;
+
+}
+
+.field-xat {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.boto-accio {
+	background-color: #00a99d;
+	border-radius: 5px;
+	color: #fff;
+}
+
+.form-submit {
+	text-align: right;
+}
+
+.missatge {
+	color: #eaeaea;
+}
+
+.nom-usuari-xat {
+	color: #00a99d;
+}
+
+.container-info {
+	background-color: #fff;
+	padding: 25px;
+}
+
+#primer {
+	padding: 25px;
+	font-size: 2em;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.imatge-prova {
+	max-width: 400px;
+}
+
