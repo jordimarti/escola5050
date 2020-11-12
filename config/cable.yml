@@ -1,10 +1,11 @@
 development:
-  adapter: async
+  adapter: redis
+  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
 
 test:
   adapter: test
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  url: <%= ENV.fetch("REDISTOGO_URL") { "redis://redistogo:8c9c27a4ef3638702034ed2afa0a0ce5@soapfish.redistogo.com:10879/" } %>
   channel_prefix: escola5050_production

@@ -1,0 +1,125 @@
+<% 
+def classe_li(correcte)
+  if correcte == true 
+    li_class = "puntuacio-positiva"
+  else
+    li_class = "puntuacio-negativa"
+  end
+  return li_class
+end
+
+def text_resultat(correcte)
+  if correcte == true 
+    resultat = "Sí"
+  else
+    resultat = "No"
+  end
+  return resultat
+end
+%>
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="inici-sessio-container">
+      <h1>Puntuacions</h1>
+      <p>Fase 1:</p>
+      <ul>
+      <% @puntuacions_fase1.each do |punt| %>
+        <% usuari = User.find_by(id: punt.user_id) %>
+        <li class="<%= classe_li(punt.correcte) %>"><%= usuari.first_name %> <%= usuari.last_name %>: <%= text_resultat(punt.correcte) %></li>
+      <% end %>
+      </ul>
+      <p>Fase 2:</p>
+      <ul>
+      <% @puntuacions_fase2.each do |punt| %>
+        <% usuari = User.find_by(id: punt.user_id) %>
+        <li class="<%= classe_li(punt.correcte) %>"><%= usuari.first_name %> <%= usuari.last_name %>: <%= text_resultat(punt.correcte) %></li>
+      <% end %>
+      </ul>
+      <p>Fase 3:</p>
+      <ul>
+      <% @puntuacions_fase3.each do |punt| %>
+        <% usuari = User.find_by(id: punt.user_id) %>
+        <li class="<%= classe_li(punt.correcte) %>"><%= usuari.first_name %> <%= usuari.last_name %>: <%= text_resultat(punt.correcte) %></li>
+      <% end %>
+      </ul>
+      <p>Fase 4:</p>
+      <ul>
+      <% @puntuacions_fase4.each do |punt| %>
+        <% usuari = User.find_by(id: punt.user_id) %>
+        <li class="<%= classe_li(punt.correcte) %>"><%= usuari.first_name %> <%= usuari.last_name %>: <%= text_resultat(punt.correcte) %></li>
+      <% end %>
+      </ul>
+      <p>Fase 5:</p>
+      <ul>
+      <% @puntuacions_fase5.each do |punt| %>
+        <% usuari = User.find_by(id: punt.user_id) %>
+        <li class="<%= classe_li(punt.correcte) %>"><%= usuari.first_name %> <%= usuari.last_name %>: <%= text_resultat(punt.correcte) %></li>
+      <% end %>
+      </ul>
+      <p>Fase 6:</p>
+      <ul>
+      <% @puntuacions_fase6.each do |punt| %>
+        <% usuari = User.find_by(id: punt.user_id) %>
+        <li class="<%= classe_li(punt.correcte) %>"><%= usuari.first_name %> <%= usuari.last_name %>: <%= text_resultat(punt.correcte) %></li>
+      <% end %>
+      </ul>
+      <p>Fase 7:</p>
+      <ul>
+      <% @puntuacions_fase7.each do |punt| %>
+        <% usuari = User.find_by(id: punt.user_id) %>
+        <li class="<%= classe_li(punt.correcte) %>"><%= usuari.first_name %> <%= usuari.last_name %>: <%= text_resultat(punt.correcte) %></li>
+      <% end %>
+      </ul>
+      <p>Fase 8:</p>
+      <ul>
+      <% @puntuacions_fase8.each do |punt| %>
+        <% usuari = User.find_by(id: punt.user_id) %>
+        <li class="<%= classe_li(punt.correcte) %>"><%= usuari.first_name %> <%= usuari.last_name %>: <%= text_resultat(punt.correcte) %></li>
+      <% end %>
+      </ul>
+      <p>Fase 9:</p>
+      <ul>
+      <% @puntuacions_fase9.each do |punt| %>
+        <% usuari = User.find_by(id: punt.user_id) %>
+        <li class="<%= classe_li(punt.correcte) %>"><%= usuari.first_name %> <%= usuari.last_name %>: <%= text_resultat(punt.correcte) %></li>
+      <% end %>
+      </ul>
+      <p>Fase 10:</p>
+      <ul>
+      <% @puntuacions_fase10.each do |punt| %>
+        <% usuari = User.find_by(id: punt.user_id) %>
+        <li class="<%= classe_li(punt.correcte) %>"><%= usuari.first_name %> <%= usuari.last_name %>: <%= text_resultat(punt.correcte) %></li>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-6">
+		<div class="inici-sessio-container">
+      <div class="inici-sessio-container">
+        <%= link_to "Esborrar informació", puntuacions_esborrar_path, class: 'btn boto-accio' %>
+        <%= link_to "Actualitzar", puntuacions_recarregar_path, class: 'btn boto-accio' %>
+      </div>
+
+      <% 
+      max_puntuacio = 0
+      guanyador = ''
+      @llistat_usuaris.each do |u|  
+        if u[1] >= max_puntuacio
+          max_puntuacio = u[1]
+          guanyador = u[0]
+        end
+      end 
+      %>
+      <ul>
+      <% @llistat_usuaris.each do |u| %>
+        <% if u[1] == max_puntuacio %>   
+          <li class="champion"><%= u[0] %>: <%= u[1] %> </li>
+        <% else %>
+          <li><%= u[0] %>: <%= u[1] %> </li>
+        <% end %>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

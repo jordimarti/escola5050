@@ -1,0 +1,562 @@
+// Place all the styles related to the Fases controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.container-fase {
+	padding: 20px;
+}
+
+.titol-repte {
+	color: #00a99d;
+}
+
+.text-repte {
+	font-size: 1.3em;
+}
+
+.repte-lletres-perdudes {
+	font-size: 1.6em;
+	word-spacing: 20px;
+}
+
+.vocal {
+	color: #00a99d;
+}
+
+#input-repte-1 {
+	width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.correcte {
+	max-width: 200px;
+}
+
+.nocorrecte {
+	max-width: 160px;
+}
+
+.benomalfet10 {
+	clear: both;
+}
+
+.graella {
+	background-color: #ccc;
+	width: 10%;
+	min-height: 20px;
+}
+
+
+#feedback { font-size: 1.4em; }
+#selectable .ui-selecting { background: #FECA40; }
+#selectable .ui-selected { background: #F39814; color: white; }
+#selectable { list-style-type: none; margin: 0; padding: 0; width: 450px; }
+#selectable li { margin: 3px; padding: 1px; float: left; width: 100px; height: 80px; font-size: 4em; text-align: center; }
+
+
+// FASE 2 - On és l'illa de Pasqua
+
+.map-slice {
+	width: 50px;
+	height: 47px;
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	float: left;
+	background-color: rgb(118, 76, 41);
+}
+
+.map-slice:hover {
+	filter: contrast(200%);
+	opacity:0.8;
+}
+
+.slice-row {
+	clear: both;
+}
+
+
+// FASE 3 - CASES MATERIALS
+
+.container-casa-material {
+	width: 102px;
+	margin-right: 10px;
+	float: left; 
+	border: 1px solid #ccc;
+	height: 204px;
+}
+
+.casa-material {
+	width: 100px;
+}
+
+.container-casa-material-clear {
+	clear: both;
+	margin-bottom: 20px;
+}
+
+.requadre-material {
+	background-color: #eaeaea;
+	width: 80px;
+	height: 80px;
+	margin: 0px 5px 5px 0px;
+	float: left;
+}
+
+.imatge-material {
+	width: 80px;
+	height: 80px;
+}
+
+#material-7 {
+	position: relative;
+}
+
+.text-material {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	padding: 0px 5px 0px 5px;
+	position: absolute;
+}
+
+.material-casa-correcte {
+	background-color: #00a99d;
+}
+
+
+// FASE 4 - Tres porquets
+
+.casa-tres-porquets {
+	width: 150px;
+	float: left;
+}
+
+.container-clear {
+	clear: both;
+}
+
+
+// FASE 5 - Estufa o manta
+
+.estufa-manta {
+	width: 150px;
+	float: left;
+}
+
+
+// FASE 7 - Panells solars
+
+.panells-solars {
+	max-width: 270px;
+}
+
+#container-panell-solar-termic {
+	float: left;
+}
+
+.requadre-produccio {
+	border: 2px solid #333;
+	float: left;
+	margin-right: 10px;
+}
+
+.imatge-produccio {
+	max-width: 80px;
+}
+
+// FASE 8 - PUZZLE
+
+#sortable { 
+	list-style-type: none; 
+	margin: 0px; 
+	padding: 0; 
+	width: 520px; 
+}
+
+#sortable li { 
+	float: left; 
+	margin: 0px 1px 1px 0px; 
+}
+
+.puzzle-slice {
+	width: 170px;
+	height: 144px;
+}
+
+#input-repte-8 {
+	width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+// FASE 9 - Rehabilitació energètica
+
+#indicators-container {
+	position: relative;  
+	margin-bottom: 15px;
+	height: 50px;
+}
+
+#container-energy {
+	float: left;
+	color: #333;
+	font-size: 13px;
+}
+
+#energy-consumption {
+	background-image: image_url("barra_energia.jpg");
+	width: 454px;
+	height: 38px;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+#energy-bar {
+	width: 410px;
+	height: 26px;
+	padding-top: 6px;
+	padding-left: 40px;
+}
+
+#energy-fill {
+	background-image: image_url("gradient_energia.jpg");
+	height: 26px;
+	width: 89%;
+}
+
+#container-money {
+	float: left;
+	margin-left: 12px;
+	color: #333;
+	font-size: 13px;
+}
+
+#money {
+	background-image: image_url("monedes.jpg");
+	width: 102px;
+	height: 38px;
+	color: white;
+	font-weight: bold;
+	font-size: 26px;
+	padding-bottom: 2px;
+	padding-left: 40px;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+#container-reload {
+	float: left;
+	margin-left: 12px;
+	margin-top: 15px;
+}
+
+#reload {
+	background-image: url(../img/reinici.jpg);
+	width: 76px;
+	height: 26px;
+	color: white;
+	font-weight: bold;
+	font-size: 16px;
+	padding-top: 10px;
+	padding-bottom: 2px;
+	padding-left: 40px;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+.link_reiniciar {
+	text-decoration: none;
+	color: white;
+}
+
+.link_reiniciar:hover {
+	text-decoration: none;
+	color: #999;
+}
+
+#items-container {
+	clear: both;
+	position: relative;
+	margin-top: 20px;
+	height: 172px;
+}
+
+.items {
+	width: 110px;
+	height: 76px;
+	margin: 0px 10px 10px 0px;
+	float: left;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+.house {
+	clear: both;
+	position: relative;
+	margin: 20px 0px 0px 40px;
+	height: 500px;
+}
+
+/* Imatges */
+
+#casa {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#casa_pintura {
+	position: absolute;
+	top: 26px;
+	left: 207px;
+}
+
+#casa_finestres {
+	position: absolute;
+	top: 132px;
+	left: 261px;
+}
+
+#casa_tendal {
+	position: absolute;
+	top: 105px;
+	left: 245px;
+}
+
+#casa_captadors_termics {
+	position: absolute;
+	top: 0px;
+	left: 190px;
+}
+
+#casa_jacuzzi {
+	position: absolute;
+	top: 190px;
+	left: 429px;
+}
+
+#casa_plantes {
+	position: absolute;
+	top: 245px;
+	left: 226px;
+}
+
+#casa_aillament {
+	position: absolute;
+	top: 67px;
+	left: 1px;
+}
+
+#casa_tele {
+	position: absolute;
+	top: 326px;
+	left: 260px;
+}
+
+#casa_captadors_fotovoltaics {
+	position: absolute;
+	top: 29px;
+	left: 100px;
+}
+
+
+#punt_pintura {
+	position: absolute;
+	top: 356px;
+	left: 440px;
+}
+
+#punt_finestres {
+	position: absolute;
+	top: 312px;
+	left: 590px;
+}
+
+#punt_tendal {
+	position: absolute;
+	top: 115px;
+	left: 380px;
+}
+
+#punt_captadors_termics {
+	position: absolute;
+	top: 10px;
+	left: 280px;
+}
+
+#punt_jacuzzi {
+	position: absolute;
+	top: 190px;
+	left: 559px;
+}
+
+#punt_plantes {
+	position: absolute;
+	top: 385px;
+	left: 610px;
+}
+
+#punt_aillament {
+	position: absolute;
+	top: 450px;
+	left: 270px;
+}
+
+#punt_tele {
+	position: absolute;
+	top: 326px;
+	left: 260px;
+}
+
+#punt_captadors_fotovoltaics {
+	position: absolute;
+	top: 49px;
+	left: 100px;
+}
+
+#punt_electrodomestics {
+	position: absolute;
+	top: 329px;
+	left: 60px;
+}
+
+#punt_llums {
+	position: absolute;
+	top: 180px;
+	left: 18px;
+}
+
+#punt_caldera {
+	position: absolute;
+	top: 279px;
+	left: 10px;
+}
+
+.text_items {
+	background-color: #333;
+	padding: 10px;
+	width: 250px;
+	opacity:0.85;
+	display: none;
+}
+
+.text_items > h3 {
+	color: white;
+	margin-bottom: 8px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.text_items > p {
+	color: white;
+	font-size: 13px;
+}
+
+#text_pintura {
+	position: absolute;
+	top: 356px;
+	left: 480px;
+}
+
+#text_finestres {
+	position: absolute;
+	top: 312px;
+	left: 320px;
+}
+
+#text_tendal {
+	position: absolute;
+	top: 115px;
+	left: 410px;
+}
+
+#text_captadors_termics {
+	position: absolute;
+	top: 10px;
+	left: 320px;
+}
+
+#text_jacuzzi {
+	position: absolute;
+	top: 190px;
+	left: 280px;
+}
+
+#text_plantes {
+	position: absolute;
+	top: 355px;
+	left: 330px;
+}
+
+#text_aillament {
+	position: absolute;
+	top: 410px;
+	left: 300px;
+}
+
+#text_tele {
+	position: absolute;
+	top: 326px;
+	left: 300px;
+}
+
+#text_captadors_fotovoltaics {
+	position: absolute;
+	top: 49px;
+	left: 140px;
+}
+
+#text_electrodomestics {
+	position: absolute;
+	top: 329px;
+	left: 100px;
+}
+
+#text_llums {
+	position: absolute;
+	top: 180px;
+	left: 58px;
+}
+
+#text_caldera {
+	position: absolute;
+	top: 279px;
+	left: 50px;
+}
+
+.container_final {
+	width: 570px;
+	min-height: 172px;
+	padding-left: 15px;
+	padding-top: 15px;
+	background-color: #eaeaea;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+.container_final > p {
+	color: #555;
+	font-size: 16px;
+}
+
+.item-rehabilitacio {
+	width: 110px;
+	height: 76px;
+}
+
+
+// FASE 10 - Tria la teva aventura
+
+.item-tria-aventura {
+	width: 260px;
+	float: left;
+	margin-left: 5px;
+}
+
+.tria-aventura {
+	width: 250px;
+}
+
+.text-tria-aventura {
+	background-color: #eaeaea;
+	border-radius: 5px;
+	padding: 10px;
+}

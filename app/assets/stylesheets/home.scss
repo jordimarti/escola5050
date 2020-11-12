@@ -1,3 +1,37 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.theo-primary-color,
+.vjs-selected {
+    color: #16a888 !important;
+}
+
+.theo-primary-background {
+    color: #000000 !important;
+    background-color: #28a388 !important;
+}
+
+.theoplayer-skin .vjs-big-play-button:hover {
+  background: none;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  transform: translate(-50%, -50%) scale(1.2);
+  transition: transform 0.2s;
+}
+/* Set other image */
+.theoplayer-skin .vjs-big-play-button:before {
+  content: "" !important;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'><linearGradient id='gradient'><stop offset='10%' stop-color='%23F00'/><stop offset='90%' stop-color='%23fcc'/> </linearGradient><rect fill='url(%23gradient)' x='0' y='0' width='100%' height='100%'/></svg>")
+    no-repeat 0 0 !important;
+  /* background: url('http://i.stack.imgur.com/LT3WE.png') no-repeat 0 0; */ /* Use image instead */
+  background-size: 100%;
+  display: block;
+}
+
+/* Remove default spotlight around button on focus */
+.theoplayer-skin:hover .vjs-big-play-button:after,
+.theoplayer-skin .vjs-big-play-button:focus:after {
+  opacity: 0;
+}

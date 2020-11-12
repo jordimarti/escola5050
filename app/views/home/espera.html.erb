@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-lg-12 col-md-12">
+    <div class="inici-sessio-container">
+      <p>Següent taller:<br/>
+      <span class="sala-espera-text"><%= @estat.anunci %></span></p>
+
+      <br/>
+      <br/>
+      <div class="sala-espera-entrar">
+        <% if @estat.obert == false %>
+          <p>Encara no es pot entrar</p>
+          <p><%= link_to "Torna a comprovar si es pot entrar", home_espera_path %></p>
+        <% else %>
+          <%= link_to "Entrar", home_index_path, class: 'btn boto-accio' %>
+        <% end %>
+      </div>
+      <br/>
+      <br/>
+    </div>
+  </div>
+</div>
