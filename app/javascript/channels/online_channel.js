@@ -11,6 +11,7 @@ consumer.subscriptions.create("OnlineChannel", {
 
   received(data) {
     // Called when there's incoming data on the websocket for this channel
+    console.log(data)
     let online = document.querySelector("#online-users")
     let el = online.querySelector(`[data-id='${data.id}']`)
 
