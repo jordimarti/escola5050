@@ -73,6 +73,16 @@ $( function() {
   
   $('.benfet3').hide()
   simulateTouchEvents($( "#material-1" ));
+  simulateTouchEvents($( "#material-2" ));
+  simulateTouchEvents($( "#material-3" ));
+  simulateTouchEvents($( "#material-4" ));
+  simulateTouchEvents($( "#material-5" ));
+  simulateTouchEvents($( "#material-6" ));
+  simulateTouchEvents($( "#material-7" ));
+  simulateTouchEvents($( "#material-8" ));
+  simulateTouchEvents($( "#material-9" ));
+  simulateTouchEvents($( "#material-10" ));
+  simulateTouchEvents($( "#material-11" ));
   $( "#material-1" ).draggable();
   $( "#material-2" ).draggable();
   $( "#material-3" ).draggable();
@@ -143,6 +153,11 @@ $( function() {
   $('.benfet7').hide()
   $('#panell-termic-ok').hide()
   $('#panell-fotovoltaic-ok').hide()
+  simulateTouchEvents($( "#produccio-1" ));
+  simulateTouchEvents($( "#produccio-2" ));
+  simulateTouchEvents($( "#produccio-3" ));
+  simulateTouchEvents($( "#produccio-4" ));
+  simulateTouchEvents($( "#produccio-5" ));
   $( "#produccio-1" ).draggable();
   $( "#produccio-2" ).draggable();
   $( "#produccio-3" ).draggable();
@@ -178,4 +193,11 @@ $( function() {
     }
     console.log("Produccions correctes:" + produccions_correctes)
   }
+
+  simulateTouchEvents($( "#puzzle1" ));
+  simulateTouchEvents($( "#puzzle2" ));
+  simulateTouchEvents($( "#puzzle3" ));
+  simulateTouchEvents($( "#puzzle4" ));
+  simulateTouchEvents($( "#puzzle5" ));
+  simulateTouchEvents($( "#puzzle6" ));
 });
