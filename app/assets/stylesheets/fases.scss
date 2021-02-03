@@ -602,7 +602,7 @@
 	clear: both;
 }
 
-.llum-aula {
+.llum-aula, .llum-aula2, .llum-aula3{
 	margin-top: 20px;
 	max-width: 570px;
 }
@@ -611,7 +611,7 @@
 	position: relative;
 }
 
-#punt-lux-1 {
+.punt-lux-primer {
 	position: absolute;
 	top: 235px;
 	left: 90px;
@@ -622,11 +622,11 @@
 	background-color: white;
 }
 
-#punt-lux-1:hover {
+.punt-lux-primer:hover {
 	background-color: #00a99d;
 }
 
-#info-lux-1 {
+.info-lux-primer {
 	position: absolute;
 	top: 195px;
 	left: 60px;
@@ -637,7 +637,7 @@
 	padding: 5px 8px;
 }
 
-#punt-lux-2 {
+.punt-lux-segon {
 	position: absolute;
 	top: 280px;
 	left: 350px;
@@ -648,11 +648,11 @@
 	background-color: white;
 }
 
-#punt-lux-2:hover {
+.punt-lux-segon:hover {
 	background-color: #00a99d;
 }
 
-#info-lux-2 {
+.info-lux-segon {
 	position: absolute;
 	top: 235px;
 	left: 330px;
@@ -663,7 +663,7 @@
 	padding: 5px 8px;
 }
 
-#punt-lux-3 {
+.punt-lux-tercer {
 	position: absolute;
 	top: 250px;
 	left: 470px;
@@ -674,11 +674,11 @@
 	background-color: white;
 }
 
-#punt-lux-3:hover {
+.punt-lux-tercer:hover {
 	background-color: #00a99d;
 }
 
-#info-lux-3 {
+.info-lux-tercer {
 	position: absolute;
 	top: 205px;
 	left: 445px;
@@ -688,3 +688,4 @@
 	border: 1px solid #333333;
 	padding: 5px 8px;
 }
+

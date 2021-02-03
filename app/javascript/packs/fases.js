@@ -678,4 +678,260 @@ $(document).on('turbolinks:load', function () {
             enviaPuntuacio(12, false)
         }
     })
+
+
+    // FASE 13 - Valors d'il·luminació
+
+    $('.benfet13').hide()
+    $('.malfet13').hide()
+    var count_iluminacio = 0
+    $('#comprova-repte-13').click(function() {
+      var valor_aula = $('#input1-repte-13').val()
+      if(valor_aula === '300') {
+        count_iluminacio += 1
+      }
+      var valor_gimnas = $('#input2-repte-13').val()
+      if(valor_gimnas === '100') {
+        count_iluminacio += 1
+      }
+      var valor_biblioteca = $('#input3-repte-13').val()
+      if(valor_biblioteca === '500') {
+        count_iluminacio += 1
+      }
+      var valor_passadis = $('#input4-repte-13').val()
+      if(valor_passadis === '100') {
+        count_iluminacio += 1
+      } 
+
+      if(count_iluminacio > 3) {
+        $('.benfet13').show()
+        enviaPuntuacio(13, true)
+      } else {
+        $('.malfet13').show()
+        enviaPuntuacio(13, false)
+      }
+
+      $('#comprova-repte-13').hide()
+    })
+
+
+    // FASE 14 - Quanta llum necessitem? (2)
+    var interruptor_3 = 0
+    var interruptor_4 = 0
+    $('.benfet14').hide()
+    $('.malfet14').hide()
+    $('#info-lux-4').hide()
+    $('#info-lux-5').hide()
+    $('#info-lux-6').hide()
+    $('.llum-aula2').hide()
+    $('#aula-5-llums').show()
+    $('#interruptor-3-on').hide()
+    $('#interruptor-4-on').hide()
+    $('#interruptor-3-off').click(function() {
+        $('#interruptor-3-off').hide()
+        $('#interruptor-3-on').show()
+        interruptor_3 = 1
+        actualitza_llum_cas_2()
+    })
+    $('#interruptor-3-on').click(function() {
+        $('#interruptor-3-on').hide()
+        $('#interruptor-3-off').show()
+        interruptor_3 = 0
+        actualitza_llum_cas_2()
+    })
+    $('#interruptor-4-off').click(function() {
+        $('#interruptor-4-off').hide()
+        $('#interruptor-4-on').show()
+        interruptor_4 = 1
+        actualitza_llum_cas_2()
+    })
+    $('#interruptor-4-on').click(function() {
+        $('#interruptor-4-on').hide()
+        $('#interruptor-4-off').show()
+        interruptor_4 = 0
+        actualitza_llum_cas_2()
+    })
+
+    function actualitza_llum_cas_2() {
+        if (interruptor_3 == 0 && interruptor_4 == 0) {
+            $('.llum-aula2').hide()
+            $('#aula-5-llums').show()
+        }
+        else if (interruptor_3 == 0 && interruptor_4 == 1) {
+            $('.llum-aula2').hide()
+            $('#aula-6-llums').show()
+        }
+        else if (interruptor_3 == 1 && interruptor_4 == 0) {
+            $('.llum-aula2').hide()
+            $('#aula-7-llums').show()
+        }
+        else if (interruptor_3 == 1 && interruptor_4 == 1) {
+            $('.llum-aula2').hide()
+            $('#aula-8-llums').show()
+        }
+    }
+
+    var luximetre4 = 560
+    var luximetre5 = 241
+    var luximetre6 = 163
+    function valors_luximetre2() {
+        if (interruptor_3 == 0 && interruptor_4 == 0) {
+            luximetre4 = 498
+            luximetre5 = 221
+            luximetre6 = 163
+        }
+        else if (interruptor_3 == 0 && interruptor_4 == 1) {
+            luximetre4 = 523
+            luximetre5 = 320    
+            luximetre6 = 269
+        }
+        else if (interruptor_3 == 1 && interruptor_4 == 0) {
+            luximetre4 = 628
+            luximetre5 = 284    
+            luximetre6 = 198
+        }
+        else if (interruptor_3 == 1 && interruptor_4 == 1) {
+            luximetre4 = 628
+            luximetre5 = 384    
+            luximetre6 = 306
+        }
+    }
+
+    $('#punt-lux-4').click(function() {
+        valors_luximetre2()
+        $('#info-lux-4').text(luximetre4 + " lux")
+        $('#info-lux-4').show().delay(2000).fadeOut()
+    })
+    $('#punt-lux-5').click(function() {
+        valors_luximetre2()
+        $('#info-lux-5').text(luximetre5 + " lux")
+        $('#info-lux-5').show().delay(2000).fadeOut()
+    })
+    $('#punt-lux-6').click(function() {
+        valors_luximetre2()
+        $('#info-lux-6').text(luximetre6 + " lux")
+        $('#info-lux-6').show().delay(2000).fadeOut()
+    })
+
+    $('#comprova-repte-14').click(function() {
+        $('#comprova-repte-14').hide()
+        if (interruptor_3 == 0 && interruptor_4 == 0) {
+            $('.benfet14').show()
+            enviaPuntuacio(14, true)
+        } else {
+            $('.malfet14').show()
+            enviaPuntuacio(14, false)
+        }
+    })
+
+
+    // FASE 15 - Quanta llum necessitem? (2)
+    var interruptor_5 = 0
+    var interruptor_6 = 0
+    $('.benfet15').hide()
+    $('.malfet15').hide()
+    $('#info-lux-7').hide()
+    $('#info-lux-8').hide()
+    $('#info-lux-9').hide()
+    $('.llum-aula3').hide()
+    $('#aula-9-llums').show()
+    $('#interruptor-5-on').hide()
+    $('#interruptor-6-on').hide()
+    $('#interruptor-5-off').click(function() {
+        $('#interruptor-5-off').hide()
+        $('#interruptor-5-on').show()
+        interruptor_5 = 1
+        actualitza_llum_cas_3()
+    })
+    $('#interruptor-5-on').click(function() {
+        $('#interruptor-5-on').hide()
+        $('#interruptor-5-off').show()
+        interruptor_5 = 0
+        actualitza_llum_cas_3()
+    })
+    $('#interruptor-6-off').click(function() {
+        $('#interruptor-6-off').hide()
+        $('#interruptor-6-on').show()
+        interruptor_6 = 1
+        actualitza_llum_cas_3()
+    })
+    $('#interruptor-6-on').click(function() {
+        $('#interruptor-6-on').hide()
+        $('#interruptor-6-off').show()
+        interruptor_6 = 0
+        actualitza_llum_cas_3()
+    })
+
+    function actualitza_llum_cas_3() {
+        if (interruptor_5 == 0 && interruptor_6 == 0) {
+            $('.llum-aula3').hide()
+            $('#aula-9-llums').show()
+        }
+        else if (interruptor_5 == 0 && interruptor_6 == 1) {
+            $('.llum-aula3').hide()
+            $('#aula-10-llums').show()
+        }
+        else if (interruptor_5 == 1 && interruptor_6 == 0) {
+            $('.llum-aula3').hide()
+            $('#aula-11-llums').show()
+        }
+        else if (interruptor_5 == 1 && interruptor_6 == 1) {
+            $('.llum-aula3').hide()
+            $('#aula-12-llums').show()
+        }
+    }
+
+    var luximetre7 = 238
+    var luximetre8 = 148
+    var luximetre9 = 98
+    function valors_luximetre3() {
+        if (interruptor_5 == 0 && interruptor_6 == 0) {
+            luximetre7 = 238
+            luximetre8 = 148
+            luximetre9 = 98
+        }
+        else if (interruptor_5 == 0 && interruptor_6 == 1) {
+            luximetre7 = 290
+            luximetre8 = 312    
+            luximetre9 = 286
+        }
+        else if (interruptor_5 == 1 && interruptor_6 == 0) {
+            luximetre7 = 340
+            luximetre8 = 251    
+            luximetre9 = 162
+        }
+        else if (interruptor_5 == 1 && interruptor_6 == 1) {
+            luximetre7 = 365
+            luximetre8 = 319    
+            luximetre9 = 289
+        }
+    }
+
+    $('#punt-lux-7').click(function() {
+        valors_luximetre3()
+        $('#info-lux-7').text(luximetre7 + " lux")
+        $('#info-lux-7').show().delay(2000).fadeOut()
+    })
+    $('#punt-lux-8').click(function() {
+        valors_luximetre3()
+        $('#info-lux-8').text(luximetre8 + " lux")
+        $('#info-lux-8').show().delay(2000).fadeOut()
+    })
+    $('#punt-lux-9').click(function() {
+        valors_luximetre3()
+        $('#info-lux-9').text(luximetre9 + " lux")
+        $('#info-lux-9').show().delay(2000).fadeOut()
+    })
+
+    $('#comprova-repte-15').click(function() {
+        $('#comprova-repte-15').hide()
+        if (interruptor_5 == 1 && interruptor_6 == 1) {
+            $('.benfet15').show()
+            enviaPuntuacio(15, true)
+        } else {
+            $('.malfet15').show()
+            enviaPuntuacio(15, false)
+        }
+    })
+
 })
