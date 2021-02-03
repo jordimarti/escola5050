@@ -1,0 +1,37 @@
+<div id="container-fase-12" class="container-fase">
+  <h1 class="titol-repte">Quanta llum necessitem?</h1>
+  <br/>
+  <p class="text-repte">Utilitza l'interruptor per engegar o apagar llums.</p>
+  
+  <div id="interruptor">
+    <div id="interruptor-1-on" class="interruptor"><%= image_tag "interruptor_1_on.jpg", class: "interruptor-1" %></div>
+    <div id="interruptor-1-off" class="interruptor"><%= image_tag "interruptor_1_off.jpg", class: "interruptor-1" %></div>
+    <div id="interruptor-2-on" class="interruptor"><%= image_tag "interruptor_2_on.jpg", class: "interruptor-2" %></div>
+    <div id="interruptor-2-off" class="interruptor"><%= image_tag "interruptor_2_off.jpg", class: "interruptor-2" %></div>
+  </div>
+
+  <div class="instruccions-interruptor">
+    <div class="cas-iluminacio">Cas 1:</div>
+    <div id="instruccio-1">Ara toca classe de matemàtiques, haureu de prendre apunts i resoldre problemes.</div>
+  </div>
+
+  <div class="break-float"></div>
+
+  <div class="imatge-classe">
+    <%= image_tag "aula_1.jpg", class: "llum-aula", id: "aula-1-llums" %>
+    <%= image_tag "aula_2.jpg", class: "llum-aula", id: "aula-2-llums" %>
+    <%= image_tag "aula_3.jpg", class: "llum-aula", id: "aula-3-llums" %>
+    <%= image_tag "aula_4.jpg", class: "llum-aula", id: "aula-4-llums" %>
+    <div id="punt-lux-1"></div>
+    <div id="info-lux-1"></div>
+    <div id="punt-lux-2"></div>
+    <div id="info-lux-2"></div>
+    <div id="punt-lux-3"></div>
+    <div id="info-lux-3"></div>
+  </div>
+
+  <br/>
+  <button id="comprova-repte-12" class="btn boto-accio">Comprova</button>
+  <p class="benfet12"><%= image_tag "correcte.png", class: "correcte" %> </p>
+  <p class="malfet12"><%= image_tag "nocorrecte.png", class: "nocorrecte" %></p>
+</div>

@@ -465,59 +465,217 @@ $(document).on('turbolinks:load', function () {
 	// Fase 10
 	$('.benfet10').hide()
 	$('.malfet10').hide()
+    var counter_10 = 0
 	
 	$('#container-tria-aventura-2').hide()
 	$('#container-tria-aventura-3').hide()
 	$('#container-tria-aventura-4').hide()
 	$('#container-tria-aventura-5').hide()
+    $('#container-tria-aventura-6').hide()
 
 	$('#llum-artificial').click(function() {
-		$('#container-tria-aventura-1').delay(3000).fadeOut()
+		$('#container-tria-aventura-1').hide()
 		$('#container-tria-aventura-2').delay(4000).fadeIn()
 		$('.malfet10').show().delay(3000).fadeOut()
 		$('.benfet10').hide()
 	})
 	$('#llum-natural').click(function() {
-		$('#container-tria-aventura-1').delay(3000).fadeOut()
+		$('#container-tria-aventura-1').hide()
 		$('#container-tria-aventura-2').delay(4000).fadeIn()
 		$('.benfet10').show().delay(3000).fadeOut()
+        counter_10 += 1
+        console.log(counter_10)
 	})
 	$('#nevera-be').click(function() {
-		$('#container-tria-aventura-2').delay(3000).fadeOut()
+		$('#container-tria-aventura-2').hide()
 		$('#container-tria-aventura-3').delay(4000).fadeIn()
 		$('.benfet10').show().delay(3000).fadeOut()
+        counter_10 += 1
 	})
 	$('#nevera-malament').click(function() {
-		$('#container-tria-aventura-2').delay(3000).fadeOut()
+		$('#container-tria-aventura-2').hide()
 		$('#container-tria-aventura-3').delay(4000).fadeIn()
 		$('.malfet10').show().delay(3000).fadeOut()
 	})
 	$('#classe-fred').click(function() {
-		$('#container-tria-aventura-3').delay(3000).fadeOut()
+		$('#container-tria-aventura-3').hide()
 		$('#container-tria-aventura-4').delay(4000).fadeIn()
 		$('.malfet10').show().delay(3000).fadeOut()
 	})
 	$('#classe-be').click(function() {
-		$('#container-tria-aventura-3').delay(3000).fadeOut()
+		$('#container-tria-aventura-3').hide()
 		$('#container-tria-aventura-4').delay(4000).fadeIn()
 		$('.benfet10').show().delay(3000).fadeOut()
+        counter_10 += 1
 	})
 	$('#transport-cotxe').click(function() {
-		$('#container-tria-aventura-4').delay(3000).fadeOut()
+		$('#container-tria-aventura-4').hide()
 		$('#container-tria-aventura-5').delay(4000).fadeIn()
 		$('.malfet10').show().delay(3000).fadeOut()
 	})
 	$('#transport-bici').click(function() {
-		$('#container-tria-aventura-4').delay(3000).fadeOut()
+		$('#container-tria-aventura-4').hide()
 		$('#container-tria-aventura-5').delay(4000).fadeIn()
 		$('.benfet10').show().delay(3000).fadeOut()
+        counter_10 += 1
 	})
 	$('#roba-estesa').click(function() {
-		$('#container-tria-aventura-5').delay(3000).fadeOut()
+		$('#container-tria-aventura-5').hide()
+        $('#container-tria-aventura-6').delay(4000).fadeIn()
 		$('.benfet10').show().delay(3000).fadeOut()
+        counter_10 += 1
+        if(counter_10 > 4) {
+            enviaPuntuacio(10, true)
+        } else {
+            enviaPuntuacio(10, false)
+        }
+        $('#respostes-correctes-tria-aventura').text(counter_10)
 	})
 	$('#roba-assecadora').click(function() {
 		$('#container-tria-aventura-5').delay(3000).fadeOut()
+        $('#container-tria-aventura-6').delay(4000).fadeIn()
 		$('.malfet10').show().delay(3000).fadeOut()
+        enviaPuntuacio(10, false)
+        $('#respostes-correctes-tria-aventura').text(counter_10)
 	})
+    
+
+    // Fase 11
+    $('#frase-4').hide()
+    $('.benfet11').hide()
+    $('.malfet11').hide()
+    $('#pista-2').click(function() {
+      $('#frase-3').hide()
+      $('#frase-4').show()
+      $('#pista-2').hide()
+    })
+    
+    $('#comprova-repte-11').click(function() {
+      valor = $('#input-repte-11').val()
+      if(valor === 'Quan sortim sempre apaguem els llums i els aparells.') {
+            $('.benfet11').show()
+            enviaPuntuacio(11, true)
+      } else if (valor === 'Quan sortim sempre apaguem els llums i els aparells') {
+            $('.benfet11').show()
+            enviaPuntuacio(11, true)
+      } else if (valor === 'quan sortim sempre apaguem els llums i els aparells.') {
+            $('.benfet11').show()
+            enviaPuntuacio(11, true)
+      } else if (valor === 'quan sortim sempre apaguem els llums i els aparells') {
+            $('.benfet11').show()
+            enviaPuntuacio(11, true)
+      } else {
+            $('.malfet11').show().delay(3000).fadeOut()
+            enviaPuntuacio(11, false)
+      }
+    })
+
+    // Fase 12
+    var interruptor_1 = 0
+    var interruptor_2 = 0
+    $('.benfet12').hide()
+    $('.malfet12').hide()
+    $('#info-lux-1').hide()
+    $('#info-lux-2').hide()
+    $('#info-lux-3').hide()
+    $('.llum-aula').hide()
+    $('#aula-1-llums').show()
+    $('#interruptor-1-on').hide()
+    $('#interruptor-2-on').hide()
+    $('#interruptor-1-off').click(function() {
+        $('#interruptor-1-off').hide()
+        $('#interruptor-1-on').show()
+        interruptor_1 = 1
+        actualitza_llum_cas_1()
+    })
+    $('#interruptor-1-on').click(function() {
+        $('#interruptor-1-on').hide()
+        $('#interruptor-1-off').show()
+        interruptor_1 = 0
+        actualitza_llum_cas_1()
+    })
+    $('#interruptor-2-off').click(function() {
+        $('#interruptor-2-off').hide()
+        $('#interruptor-2-on').show()
+        interruptor_2 = 1
+        actualitza_llum_cas_1()
+    })
+    $('#interruptor-2-on').click(function() {
+        $('#interruptor-2-on').hide()
+        $('#interruptor-2-off').show()
+        interruptor_2 = 0
+        actualitza_llum_cas_1()
+    })
+
+    function actualitza_llum_cas_1() {
+        if (interruptor_1 == 0 && interruptor_2 == 0) {
+            $('.llum-aula').hide()
+            $('#aula-1-llums').show()
+        }
+        else if (interruptor_1 == 0 && interruptor_2 == 1) {
+            $('.llum-aula').hide()
+            $('#aula-2-llums').show()
+        }
+        else if (interruptor_1 == 1 && interruptor_2 == 0) {
+            $('.llum-aula').hide()
+            $('#aula-3-llums').show()
+        }
+        else if (interruptor_1 == 1 && interruptor_2 == 1) {
+            $('.llum-aula').hide()
+            $('#aula-4-llums').show()
+        }
+    }
+
+    var luximetre1 = 560
+    var luximetre2 = 241
+    var luximetre3 = 163
+    function valors_luximetre() {
+        if (interruptor_1 == 0 && interruptor_2 == 0) {
+            luximetre1 = 498
+            luximetre2 = 221
+            luximetre3 = 163
+        }
+        else if (interruptor_1 == 0 && interruptor_2 == 1) {
+            luximetre1 = 523
+            luximetre2 = 320    
+            luximetre3 = 269
+        }
+        else if (interruptor_1 == 1 && interruptor_2 == 0) {
+            luximetre1 = 628
+            luximetre2 = 284    
+            luximetre3 = 198
+        }
+        else if (interruptor_1 == 1 && interruptor_2 == 1) {
+            luximetre1 = 628
+            luximetre2 = 384    
+            luximetre3 = 306
+        }
+    }
+
+    $('#punt-lux-1').click(function() {
+        valors_luximetre()
+        $('#info-lux-1').text(luximetre1 + " lux")
+        $('#info-lux-1').show().delay(2000).fadeOut()
+    })
+    $('#punt-lux-2').click(function() {
+        valors_luximetre()
+        $('#info-lux-2').text(luximetre2 + " lux")
+        $('#info-lux-2').show().delay(2000).fadeOut()
+    })
+    $('#punt-lux-3').click(function() {
+        valors_luximetre()
+        $('#info-lux-3').text(luximetre3 + " lux")
+        $('#info-lux-3').show().delay(2000).fadeOut()
+    })
+
+    $('#comprova-repte-12').click(function() {
+        $('#comprova-repte-12').hide()
+        if (interruptor_1 == 0 && interruptor_2 == 1) {
+            $('.benfet12').show()
+            enviaPuntuacio(12, true)
+        } else {
+            $('.malfet12').show()
+            enviaPuntuacio(12, false)
+        }
+    })
 })

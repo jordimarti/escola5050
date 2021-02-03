@@ -1,10 +1,15 @@
 class HomeController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :casa]
+  before_action :authenticate_user!, only: [:index, :taller2, :casa]
   
   def index
   	@missatge = Missatge.new
     @missatges = Missatge.all
     
+  end
+
+  def taller2
+    @missatge = Missatge.new
+    @missatges = Missatge.all
   end
 
   def video

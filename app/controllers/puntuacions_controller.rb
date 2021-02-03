@@ -10,6 +10,8 @@ class PuntuacionsController < ApplicationController
     @puntuacions_fase8 = Puntuacio.where(fase: 8)
     @puntuacions_fase9 = Puntuacio.where(fase: 9)
     @puntuacions_fase10 = Puntuacio.where(fase: 10)
+    @puntuacions_fase11 = Puntuacio.where(fase: 11)
+    @puntuacions_fase12 = Puntuacio.where(fase: 12)
 
     # Aquí fer query per tenir llistat d'usuaris amb suma de puntuacions
     usuaris = User.all
