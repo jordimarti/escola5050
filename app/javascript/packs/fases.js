@@ -996,7 +996,7 @@ $(document).on('turbolinks:load', function () {
         $('#aparells-porta').hide()
     })
     $('#contorn-porta').click(function() {
-        if (apagats == 4) {
+        if (apagats > 3) {
             $('.benfet16').show()
             enviaPuntuacio(16, true)
         } else {

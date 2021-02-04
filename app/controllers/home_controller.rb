@@ -21,4 +21,10 @@ class HomeController < ApplicationController
     @missatges = Missatge.all
     @video = 'wHiat6z6W00dCJjlnoLnx5Fln2mzR9bnuWRIlHeSjZ01E'
   end
+
+  def talleracasa
+    @missatge = Missatge.new
+    @missatges = Missatge.all
+    @video = 'wHiat6z6W00dCJjlnoLnx5Fln2mzR9bnuWRIlHeSjZ01E'
+  end
 end

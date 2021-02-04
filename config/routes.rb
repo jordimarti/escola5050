@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'puntuacions/grava_puntuacio'
   get 'home/espera'
   get 'taller2', to: 'home#taller2', as: :taller2
+  get 'talleracasa', to: 'home#talleracasa', as: :talleracasa
   get 'casa', to: 'home#casa', as: :casa
   get 'video', to: 'home#video', as: :video
   get 'home/index'
