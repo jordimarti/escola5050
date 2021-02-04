@@ -689,3 +689,57 @@
 	padding: 5px 8px;
 }
 
+
+// FASE 16 - Seguim les instruccions
+
+.contenidor-imatge {
+	height: 380px;
+}
+
+.imatge-classe2 {
+	position: relative;
+}
+
+.aparells-aula {
+	position: absolute;
+	max-width: 570px;
+}
+
+.contorns-aparells {
+	position: absolute;
+}
+
+#contorn-interruptor {
+	top: 160px;
+	left: 495px;
+	width: 20px;
+	height: 10px;
+}
+
+#contorn-projector {
+	top: 115px;
+	left: 230px;
+	width: 40px;
+	height: 15px;
+}
+
+#contorn-ordinador {
+	top: 176px;
+	left: 180px;
+	width: 15px;
+	height: 25px;
+}
+
+#contorn-pantalla {
+	top: 179px;
+	left: 150px;
+	width: 27px;
+	height: 18px;
+}
+
+#contorn-porta {
+	top: 120px;
+	left: 435px;
+	width: 50px;
+	height: 100px;
+}

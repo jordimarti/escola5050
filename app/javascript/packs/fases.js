@@ -934,4 +934,75 @@ $(document).on('turbolinks:load', function () {
         }
     })
 
+
+    // Fase 16 - Seguim les instruccions
+    $('.benfet16').hide()
+    $('.malfet16').hide()
+    $('#aparells-ordinador').hide()
+    $('#aparells-pantalla').hide()
+    $('#aparells-pantallaapagada').hide()
+    $('#aparells-porta').hide()
+    $('#aparells-projector').hide()
+    $('#aparells-interruptor').hide()
+    $('#aparells-2').hide()
+    var apagats = 0
+    $('#contorn-interruptor').mouseover(function() {
+        $('#aparells-interruptor').show()
+    })
+    $('#contorn-interruptor').mouseout(function() {
+        $('#aparells-interruptor').hide()
+    })
+    $('#contorn-interruptor').click(function() {
+        apagats += 1
+        $('#aparells-2').show()
+    })
+    $('#contorn-ordinador').mouseover(function() {
+        $('#aparells-ordinador').show()
+    })
+    $('#contorn-ordinador').mouseout(function() {
+        $('#aparells-ordinador').hide()
+    })
+    $('#contorn-ordinador').click(function() {
+        apagats += 1
+        $('#aparells-projector-si-pc').hide()
+        $('#aparells-fonspantalla').hide()
+        $('#aparells-ledpc').hide()
+    })
+    $('#contorn-projector').mouseover(function() {
+        $('#aparells-projector').show()
+    })
+    $('#contorn-projector').mouseout(function() {
+        $('#aparells-projector').hide()
+    })
+    $('#contorn-projector').click(function() {
+        apagats += 1
+        $('#aparells-projector-si-pc').hide()
+        $('#aparells-projector-no-pc').hide()
+    })
+    $('#contorn-pantalla').mouseover(function() {
+        $('#aparells-pantalla').show()
+    })
+    $('#contorn-pantalla').mouseout(function() {
+        $('#aparells-pantalla').hide()
+    })
+    $('#contorn-pantalla').click(function() {
+        apagats += 1
+        $('#aparells-pantallaapagada').show()
+    })
+    $('#contorn-porta').mouseover(function() {
+        $('#aparells-porta').show()
+    })
+    $('#contorn-porta').mouseout(function() {
+        $('#aparells-porta').hide()
+    })
+    $('#contorn-porta').click(function() {
+        if (apagats == 4) {
+            $('.benfet16').show()
+            enviaPuntuacio(16, true)
+        } else {
+            $('.malfet16').show().delay(2000).fadeOut()
+            enviaPuntuacio(16, false)
+        }
+    })
+
 })

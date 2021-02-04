@@ -120,6 +120,20 @@ end
         <li class="<%= classe_li(punt.correcte) %>"><%= usuari.first_name %> <%= usuari.last_name %>: <%= text_resultat(punt.correcte) %></li>
       <% end %>
       </ul>
+      <p>Fase 15:</p>
+      <ul>
+      <% @puntuacions_fase15.each do |punt| %>
+        <% usuari = User.find_by(id: punt.user_id) %>
+        <li class="<%= classe_li(punt.correcte) %>"><%= usuari.first_name %> <%= usuari.last_name %>: <%= text_resultat(punt.correcte) %></li>
+      <% end %>
+      </ul>
+      <p>Fase 16:</p>
+      <ul>
+      <% @puntuacions_fase16.each do |punt| %>
+        <% usuari = User.find_by(id: punt.user_id) %>
+        <li class="<%= classe_li(punt.correcte) %>"><%= usuari.first_name %> <%= usuari.last_name %>: <%= text_resultat(punt.correcte) %></li>
+      <% end %>
+      </ul>
     </div>
   </div>
   <div class="col-md-6">
