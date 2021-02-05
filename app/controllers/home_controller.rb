@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :taller2, :casa]
+  before_action :authenticate_user!, only: [:index, :taller2, :casa, :talleracasa]
   
   def index
   	@missatge = Missatge.new
